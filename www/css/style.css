@@ -8,6 +8,14 @@ label {
   font-weight: bold;
 }
 
-ol {
-  list-style-type: disc;
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -(180/2)px;
+    margin-top: -(180/2)px;
+}
+
+.checkbox {
+  float: left;
 }
