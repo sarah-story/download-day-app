@@ -1,22 +1,13 @@
-/* 
-SANTA ON THE RUN
-Uses phaser.js http://phaser.io
-♥
-*/
-
-// FULL mode is best for phones http://codepen.io/natewiley/full/gbwWMX
 app.controller('GameCtrl',function() {
-  console.log('controller');
+
   function game(){
 
-    console.log("hi");
-
     var width = window.innerWidth;
-    var height = window.innerHeight > 480 ? 480 : window.innerHeight;
+    var height = window.innerHeight;
     var gameScore = 0;
     var highScore = 0;
 
-    var SantaGame = {
+    var SteveGame = {
 
       init: function(){
 
@@ -33,9 +24,8 @@ app.controller('GameCtrl',function() {
       load: {
         preload: function(){
           this.game.load.image('platform', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/ground.png');
-          this.game.load.spritesheet('santa-running', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/santa-running.png', 37, 52);
-          this.game.load.image('snow-bg', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/snow-bg.png');
-          this.game.load.image('snowflake', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/snowflake.png');
+          this.game.load.spritesheet('steve-running', 'http://s12.postimg.org/x2jislgft/steve.png', 52, 52);
+          this.game.load.image('snow-bg', 'http://s11.postimg.org/c0e9d2q9f/space.png');
           this.game.load.image("logo", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/game-logo.png");
           this.game.load.image("instructions", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/instructions.png");
           this.game.load.image("game-over", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/game-over.png");
@@ -99,10 +89,6 @@ app.controller('GameCtrl',function() {
             this.isGameOver = false;
             this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
-            this.music = this.game.add.audio("drivin-home");
-            this.music.loop = true;
-            this.music.play();
-
             this.bg = this.game.add.tileSprite(0, 0, width, height, 'snow-bg');
             this.bg.fixedToCamera = true;
             this.bg.autoScroll(-this.gameSpeed / 6, 0);
@@ -129,25 +115,16 @@ app.controller('GameCtrl',function() {
 
             this.lastPlatform = plat;
 
-            this.santa = this.game.add.sprite(100, this.game.world.height - 200, 'santa-running');
-            this.santa.animations.add("run");
-            this.santa.animations.play('run', 20, true);
+            this.steve = this.game.add.sprite(100, this.game.world.height - 200, 'steve-running');
+            this.steve.animations.add("run");
+            this.steve.animations.play('run', 20, true);
 
-            this.game.physics.arcade.enable(this.santa);
+            this.game.physics.arcade.enable(this.steve);
 
-            this.santa.body.gravity.y = 1500;
-            this.santa.body.collideWorldBounds = true;
-            
-            this.emitter.makeParticles('snowflake');
-            this.emitter.maxParticleScale = .02;
-            this.emitter.minParticleScale = .001;
-            this.emitter.setYSpeed(100, 200);
-            this.emitter.gravity = 0;
-            this.emitter.width = this.game.world.width * 1.5;
-            this.emitter.minRotation = 0;
-            this.emitter.maxRotation = 40;
+            this.steve.body.gravity.y = 1500;
+            this.steve.body.collideWorldBounds = true;
 
-            this.game.camera.follow(this.santa);
+            this.game.camera.follow(this.steve);
             this.cursors = this.game.input.keyboard.createCursorKeys();
             
             this.spacebar = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
@@ -169,24 +146,16 @@ app.controller('GameCtrl',function() {
                  
               this.currentFrame++;
               var moveAmount = this.gameSpeed / 100;
-              this.game.physics.arcade.collide(this.santa, this.platforms);
+              this.game.physics.arcade.collide(this.steve, this.platforms);
 
-              if(this.santa.body.bottom >= this.game.world.bounds.bottom){
+              if(this.steve.body.bottom >= this.game.world.bounds.bottom){
                 this.isGameOver = true;
                 this.endGame();
                 
               }
 
-              if(this.cursors.up.isDown && this.santa.body.touching.down || this.spacebar.isDown && this.santa.body.touching.down || this.game.input.mousePointer.isDown && this.santa.body.touching.down || this.game.input.pointer1.isDown && this.santa.body.touching.down){
-                this.jumpSound = this.game.add.audio("hop");
-                this.jumpSound.play();
-                this.santa.body.velocity.y = -500;
-              }
-
-
-              if(this.particleInterval === this.currentFrame){
-                this.emitter.makeParticles('snowflake');
-                this.currentFrame = 0;
+              if(this.cursors.up.isDown && this.steve.body.touching.down || this.spacebar.isDown && this.steve.body.touching.down || this.game.input.mousePointer.isDown && this.steve.body.touching.down || this.game.input.pointer1.isDown && this.steve.body.touching.down){
+                this.steve.body.velocity.y = -500;
               }
 
               this.platforms.children.forEach(function(platform) {
@@ -206,9 +175,6 @@ app.controller('GameCtrl',function() {
 
 
           endGame: function(){
-            this.music.stop();
-            this.music = this.game.add.audio("ho-ho-ho");
-            this.music.play();
             this.game.state.start("gameOver");
           }
 
@@ -238,7 +204,7 @@ app.controller('GameCtrl',function() {
 
     };
 
-    SantaGame.init();
+    SteveGame.init();
       
   };
 
