@@ -12,6 +12,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state(
       'game', {
         url: '/game',
-        templateUrl: 'partials/game.html'
+        template: '<div id="game"></div>'
       })
 })

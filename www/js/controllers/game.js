@@ -11,7 +11,6 @@ Uses phaser.js http://phaser.io
   console.log("hi");
 
 var width = window.innerWidth;
-console.log(width);
 var height = window.innerHeight > 480 ? 480 : window.innerHeight;
 var gameScore = 0;
 var highScore = 0;
@@ -20,7 +19,7 @@ var SantaGame = {
 
   init: function(){
 
-    this.game = new Phaser.Game(width, height, Phaser.CANVAS, '');
+    this.game = new Phaser.Game(width, height, Phaser.CANVAS, 'game');
     this.game.state.add("load", this.load);
     this.game.state.add("play", this.play);
     this.game.state.add("title", this.title);
