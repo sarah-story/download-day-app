@@ -8,5 +8,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
       'home', {
       url: '/',
       templateUrl: 'partials/login.html'
-  })
+    })
+    .state(
+      'game', {
+        url: '/game',
+        templateUrl: 'partials/game.html'
+      })
 })

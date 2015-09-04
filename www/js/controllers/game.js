@@ -8,7 +8,10 @@ Uses phaser.js http://phaser.io
 
 (function(){
 
+  console.log("hi");
+
 var width = window.innerWidth;
+console.log(width);
 var height = window.innerHeight > 480 ? 480 : window.innerHeight;
 var gameScore = 0;
 var highScore = 0;
