@@ -1,1 +1,13 @@
 /* Empty. Add your own CSS if you like */
+
+i { 
+    font-style: italic;
+}
+
+label {
+  font-weight: bold;
+}
+
+ol {
+  list-style-type: disc;
+}
