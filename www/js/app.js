@@ -29,7 +29,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/win3',
       templateUrl: 'partials/win-installs.html'
   })
-    })
     .state(
       'game', {
         url: '/game',
