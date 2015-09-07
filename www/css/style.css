@@ -4,8 +4,17 @@ i {
     font-style: italic;
 }
 
-label {
-  font-weight: bold;
+mark {
+  background-color: ffff99s;
+}
+
+.opSys {
+  text-align: center;
+  list-style-type: none;
+}
+
+li {
+  text-align: justify;
 }
 
 img {

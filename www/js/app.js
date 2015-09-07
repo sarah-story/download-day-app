@@ -7,27 +7,37 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state(
       'home', {
       url: '/',
-      templateUrl: 'partials/logo.html'
+      templateUrl: 'partials/login.html'
   })
     .state(
       'installs1', {
-      url: '/1',
+      url: '/page1',
       templateUrl: 'partials/installs1.html'
   })
     .state(
       'installs2', {
-      url: '/2',
+      url: '/page2',
       templateUrl: 'partials/installs2.html'
   })
     .state(
-      'mac-installs', {
-      url: '/mac3',
-      templateUrl: 'partials/mac-installs.html'
+      'installs3', {
+      url: '/page3',
+      templateUrl: 'partials/installs3.html'
   })
     .state(
-      'win-installs', {
-      url: '/win3',
-      templateUrl: 'partials/win-installs.html'
+      'mac-installs4', {
+      url: '/mac4',
+      templateUrl: 'partials/mac-installs4.html'
+  })
+    .state(
+      'win-installs4', {
+      url: '/win4',
+      templateUrl: 'partials/win-installs4.html'
+  })
+    .state(
+      'win-installs5', {
+      url: '/win5',
+      templateUrl: 'partials/win-installs5.html'
   })
     .state(
       'game', {
