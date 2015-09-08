@@ -33,6 +33,12 @@ app.controller('CheckboxCtrl', ["$scope", function($scope, $location) {
       console.log("Not yet");
     }
 
+    if(obj.powershell && obj.chocolate){
+      location.assign(path);
+    }else{
+      console.log("Not yet");
+    }
+
   }
 
 }]);
