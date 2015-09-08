@@ -223,5 +223,8 @@ app.controller('GameCtrl',function() {
       
   };
 
+
   game();
 });
+
+ 

@@ -1,31 +1,32 @@
 <ion-content>
   <li class="item item-checkbox item-text-wrap">
-    <input type="checkbox"> 
+    <input type="checkbox" ng-model="installsTwo.chrome" ng-change="checkboxStatus(installsTwo, '#/page3')"> 
     <h2><u>Google Chrome</u></h2>
-    <a href="https://www.google.com/chrome/browser/desktop/index.html">Google Chrome</a> is the most popular browser for web developers because of the powerful tools it provides to test code, manipulate documents, and measure performance.
+    <a target='_blank' href="https://www.google.com/chrome/browser/desktop/index.html">Google Chrome</a> is the most popular browser for web developers because of the powerful tools it provides to test code, manipulate documents, and measure performance.
   </li>
   <li class="item item-checkbox item-text-wrap">
-    <input type="checkbox"> 
+    <input type="checkbox" ng-model="installsTwo.cast" ng-change="checkboxStatus(installsTwo, '#/page3')"> 
     <h2><u>Google Cast extension</u></h2>
-     Once Chrome is installed, open it and visit the <a href="https://www.google.com/chrome/browser/desktop/index.html">Chrome Store page</a> for Google Cast and install it. This will allow you to share your browser screen in the classroom.
+     Once Chrome is installed, open it and visit the <a target='_blank' href="https://www.google.com/chrome/browser/desktop/index.html">Chrome Store page</a> for Google Cast and install it. This will allow you to share your browser screen in the classroom.
   </li>
   <li class="item item-checkbox item-text-wrap">
-    <input type="checkbox"> 
+    <input type="checkbox" ng-model="installsTwo.sublime" ng-change="checkboxStatus(installsTwo, '#/page3')"> 
     <h2><u>Sublime Text</u></h2>
     <ol>
       <li>
-        Visit the Sublime Text website and click the link that corresponds to your operating system. Then install once the download is complete.
+        Visit the <a target='_blank' href="http://www.sublimetext.com/3">Sublime Text</a> website and click the link that corresponds to your operating system. Then install once the download is complete.
       </li><br>
       <li>
-        Install the Sublime Text package control which, in turn, allows you to easily install and manage tons of really cool add-ons for customizing your Sublime editor.
+        Install the Sublime Text <a target='_blank' href="https://packagecontrol.io/installation">package control</a> which, in turn, allows you to easily install and manage tons of really cool add-ons for customizing your Sublime editor.
       </li><br>
       <li>
-        Read this excellent introduction to getting the very most out of Sublime Text. These tips will make coding more enjoyable and increase your speed.
+        Read this <a target='_blank' href="https://scotch.io/bar-talk/best-of-sublime-text-3-features-plugins-and-settings">excellent introduction</a> to getting the very most out of Sublime Text. These tips will make coding more enjoyable and increase your speed.
       </li>
     </ol>
   </li><br>
   <div id="navigate">
-  <a href="#/page1" id="direction" class="button button-half button-light windows-btn ">Previous</a>
-  <a href="#/page3" id="direction" class="button button-half button-light windows-btn ">Next</a>
+  <a class="button icon-left ion-chevron-left button-calm" href="#/page1">Previous</a>
+  <a class="button icon-right ion-chevron-right button-calm" href="#/page3">Next</a>
+  <a class="button button-royal" href="#/game" >Game</a>
 </div>
 </ion-content>
