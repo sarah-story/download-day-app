@@ -212,7 +212,4 @@ app.controller('GameCtrl',function() {
   game();
 });
 
-  function goBack() {
-    window.history.back();
-    console.log("back")
-}
+ 
