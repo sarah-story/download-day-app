@@ -12,7 +12,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state(
       'installs1', {
       url: '/page1',
-      templateUrl: 'partials/installs1.html'
+      templateUrl: 'partials/installs1.html',
+      controller: 'CheckboxCtrl'
   })
     .state(
       'installs2', {
