@@ -34,7 +34,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state(
       'win-installs4', {
       url: '/win4',
-      templateUrl: 'partials/win-installs4.html'
+      templateUrl: 'partials/win-installs4.html',
+      controller: 'CheckboxCtrl'
   })
     .state(
       'win-installs5', {

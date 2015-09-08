@@ -14,6 +14,11 @@ app.controller('CheckboxCtrl', ["$scope", function($scope, $location) {
     "sublime" : false
   };
 
+  $scope.winInstalls = {
+    "powershell" : false,
+    "chocolate" : false
+  }
+
   $scope.checkboxStatus = function(obj, path){
 
     if(obj.github && obj.slack && obj.treehouse && obj.codepen){
