@@ -9,12 +9,20 @@ app.controller('CheckboxCtrl', ["$scope", function($scope, $location) {
   };
 
   $scope.installsTwo = {
-
+    "chrome" : false,
+    "cast" : false,
+    "sublime" : false
   };
 
   $scope.checkboxStatus = function(obj, path){
 
     if(obj.github && obj.slack && obj.treehouse && obj.codepen){
+      location.assign(path);
+    }else{
+      console.log("Not yet");
+    }
+
+    if(obj.chrome && obj.cast && obj.sublime){
       location.assign(path);
     }else{
       console.log("Not yet");
