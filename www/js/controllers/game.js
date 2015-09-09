@@ -26,7 +26,7 @@ app.controller('GameCtrl',function() {
           this.game.load.image('platform', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/ground.png');
           this.game.load.spritesheet('steve-running', 'http://s12.postimg.org/x2jislgft/steve.png', 52, 52);
           this.game.load.image('snow-bg', 'http://s11.postimg.org/c0e9d2q9f/space.png');
-          this.game.load.image("logo", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/game-logo.png");
+          this.game.load.image("logo", "http://s22.postimg.org/reg0xmfrl/game_title.png");
           this.game.load.image("instructions", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/instructions.png");
           this.game.load.image("game-over", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/game-over.png");
           this.game.load.image("startbtn", "http://i827.photobucket.com/albums/zz191/tacilin1/startBtn_zpsxkekn9gt.png");
