@@ -1,26 +1,21 @@
 <ion-content>
   <ul class="list">
     <li class="item item-checkbox item-text-wrap">
-      <input type="checkbox">
+      <input type="checkbox" ng-model="winInstalls.powershell" ng-change="checkboxStatus(winInstalls, '#/win5')">
       <h2><u>Git powershell</u></h2>
       <ol>
-        <li>Visit the <a href="http://www.git-scm.com/downloads">Git powershell</a> download page click the "Download for Windows" button, and once complete, install the software. Powershell is a command line utility that allows you to run most Unix command inside a Windows environment. This will help you have the same vernacular as the rest of the class, since having a Unix environment is preferred and is how the class is taught.</li><br>
+        <li>Visit the <a target='_blank' href="http://www.git-scm.com/downloads">Git powershell</a> download page click the "Download for Windows" button, and once complete, install the software. Powershell is a command line utility that allows you to run most Unix command inside a Windows environment. This will help you have the same vernacular as the rest of the class, since having a Unix environment is preferred and is how the class is taught.</li><br>
         <li>Git is a program that allows software developers to efficiently manage how their code is versioned, shared, and archived. You will be learning how to use it during class.
         </li>
       </ol>
     </li>
     <li class="item item-checkbox item-text-wrap">
-      <input type="checkbox"> 
+      <input type="checkbox" ng-model="winInstalls.chocolate" ng-change="checkboxStatus(winInstalls, '#/win5')"> 
       <h2><u>Chocolatey package manager (optional)</u></h2>
-      Visit <a href="https://teamtreehouse.com/">treehouse</a> and create an account with the Basic Plan, which is $25 per month.
-    </li>
-    <li class="item item-checkbox item-text-wrap">
-      <input type="checkbox"> 
-      <h2><u>Create Codepen account</u></h2>
       
         Windows, like OSX, does not have a built in package manager (a fancy term for a piece of software that lets you easily install other software that you need as a developer). There will be times, many weeks into class, as you gain confidence and skill, that you will want to use a package manager. Therefore, if you feel up to the task - meaning, you were able to install all the required software easily - you may want to install Chocolately.
 
-        Here's the <a href="https://chocolatey.org/">official page</a>, but it's instructions are written to an audience of existing software developers and may be confusing for a layperson. Here's the basic instructions:<br><br>
+        Here's the <a target='_blank' href="https://chocolatey.org/">official page</a>, but it's instructions are written to an audience of existing software developers and may be confusing for a layperson. Here's the basic instructions:<br><br>
 
         1. Press your Windows key.<br><br>
         2. Type cmd into the search box.<br><br>
@@ -30,8 +25,10 @@
     </li>
   </ul>
   
-  <a href="#/page3" id="direction" class="button button-half button-light windows-btn ">Previous</a>
-  <a href="#/win5" id="direction" class="button button-half button-light windows-btn ">Next</a>
+  
+  <a class="button icon-left ion-chevron-left button-calm" href="#/page3">Previous</a>
+  <a class="button icon-right ion-chevron-right button-calm" href="#/win5">Next</a>
+  <a class="button button-royal" href="#/game" >Game</a>
  
 </ion-content>
 

@@ -12,12 +12,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state(
       'installs1', {
       url: '/page1',
-      templateUrl: 'partials/installs1.html'
+      templateUrl: 'partials/installs1.html',
+      controller: 'CheckboxCtrl'
   })
     .state(
       'installs2', {
       url: '/page2',
-      templateUrl: 'partials/installs2.html'
+      templateUrl: 'partials/installs2.html',
+      controller: 'CheckboxCtrl'
   })
     .state(
       'installs3', {
@@ -32,7 +34,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state(
       'win-installs4', {
       url: '/win4',
-      templateUrl: 'partials/win-installs4.html'
+      templateUrl: 'partials/win-installs4.html',
+      controller: 'CheckboxCtrl'
   })
     .state(
       'win-installs5', {
@@ -47,3 +50,4 @@ app.config(function($stateProvider, $urlRouterProvider) {
         cache: false
     })
 })
+
